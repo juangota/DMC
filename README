@@ -1,0 +1,11 @@
+Mindera qa-sortable-challenge
+
+Is expected that the test app is installed and running on http://localhost:3000, following the instructions given at https://bitbucket.org/mindera/qa-sortable-challenge
+
+Build the image:
+docker build -t qa-sort-challange_selenium .
+
+Execute the script:
+docker run --privileged -p 4000:4000 --network="host" --env="DISPLAY" --volume="$HOME/.Xauthority:/root/.Xauthority:rw" --ipc=host --pid=host -it qa-sort-challange_selenium
+
+At the end of the script you must press Enter key tt the console o leave the test
